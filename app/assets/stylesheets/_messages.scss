@@ -13,18 +13,18 @@
     padding:0 20px;
     text-align: center;
     justify-content:space-between;
-    &__user-name { 
+    &__name { 
       color: #ffffff;
       font-size: 18px;
       font-weight: bold;
       margin:auto 20px;
     }
-    &__menu{
+    &__lists{
       display:flex;
       justify-content:space-between;
       color: #ffffff;
       margin:auto 20px;
-      &__btn{
+      .icon{
         color:#ffffff;
       }
     }
