@@ -1,19 +1,30 @@
 .side-bar
   .header
-    %p.header__user-name ユーザー1
-    %ul.header__menu
-      %li.header__menu__new-group
-        =link_to "#", class: "header__menu__btn" do
-          = fa_icon 'edit'
-      %li.header__menu__edit-user
-        =link_to "#", class: "header__menu__btn" do
-          = fa_icon 'cog'
+    %h3.header__name
+      = current_user.name
+    %ul.header__lists
+      %li.list
+        =link_to do
+          = fa_icon 'pencil-square-o', class: 'icon'
+      %li.list
+        =link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
   .groups
-    =link_to "#", class: "groups__btn" do
-      .group 
-        %p.group__name グループ1
-        %p.group__message こんにちは
-    =link_to "#", class: "groups__btn" do
-      .group
-        %p.group__name グループ2
-        %p.group__message まだメッセージがありません
+    .group
+      .group__name
+        グループ名
+      .group__message
+        新着メッセージ
+    .group
+      .group__name
+        グループ名
+      .group__message
+        新着メッセージ
+    .group
+      .group__name
+        グループ名
+      .group__message
+        新着メッセージ
+        
+
+ 
