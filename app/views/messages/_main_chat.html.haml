@@ -1,11 +1,13 @@
 .chat
   .header
     .left-header
-      %h2.left-header__title
+      .left-header__box
+      %h2.left-header__box__title
         = @group.name
-      %p.left-header__members メンバー
-      - @group.group_users.each do |group_user|
-        = group_user.user.name
+      %ul.left-header__box__members
+        メンバー
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     =link_to edit_group_path(current_user), class: "right-header" do 
       .right-header__button Edit
 
