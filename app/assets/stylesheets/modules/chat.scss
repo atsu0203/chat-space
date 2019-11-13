@@ -1,26 +1,30 @@
 .chat{
   width: calc(100vw - 300px);
+
   .header {
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
+    display:flex;
+    justify-content: space-between;
     .left-header {
-      float: left;
-      &__title{      
-        margin-top:35px;
-        font-size:20px;
-        color: #333;
-      }
-      &__members{
-        margin-top: 15px;
-        font-size: 12px;
-        color: $light_gray;
-        // member{
-        // display: inline-block;
-        // padding-right: 5px;
-        // }
-      }
-    } 
+      font-size: 12px;
+      color: $light_gray;
+      &__box{
+        display:flex;
+        &__title{      
+          margin-top:35px;
+          font-size:20px;
+          color: #333;
+        }
+        &__members{
+          display: flex;
+          margin-top: 15px;
+          font-size: 12px;
+          color: $light_gray; 
+          }
+        } 
+      } 
     .right-header{
       border: 1px solid $light_blue;
       color: $light_blue;
@@ -37,11 +41,13 @@
     }
    
   .messages {
+    overflow:scroll;
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 100px - 90px);
     .message{
+
       .upper-message {
         display: flex;
         &__user-name {
@@ -61,6 +67,10 @@
           color: $black;
           font-size: 14px;
           margin-bottom: 40px;
+        }
+        &__image { 
+          width:200px;
+          height: auto;
         }
       }
     }
